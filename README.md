@@ -7,19 +7,26 @@ To write a program to implement the K Means Clustering for Customer Segmentation
 1. Hardware – PCs
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
-## Algorithm
-1.Import pandas and matplotlib.pyplot  
-2.Read the dataset and transform it  
-3.Import KMeans and fit the data in the mode
-4.Plot the Cluster graph 
+## Algorithm:
+
+1.Import the necessary packages using import statement.
+
+2.Read the given csv file using read_csv() method and print the number of contents to be displayed using df.head().
+
+3.Import KMeans and use for loop to cluster the data.
+
+4.Predict the cluster and plot data graphs.
+
+5.Print the outputs and end the program
 
 ## Program:
 ```
 /*
 Program to implement the K Means Clustering for Customer Segmentation.
 Developed by: DEEPAK RAJ S
-RegisterNumber: 212222240023
+RegisterNumber:  212222240023
 */
+
 import pandas as pd
 import matplotlib.pyplot as plt
 data = pd.read_csv("/content/Mall_Customers (1) (1).csv")
@@ -46,41 +53,30 @@ df1 = data[data["cluster"]==1]
 df2 = data[data["cluster"]==2]
 df3 = data[data["cluster"]==3]
 df4 = data[data["cluster"]==4]
-plt.scatter(df0["Annual Income (k$)"],df0["Spending Score (1-
-100)"],c="red",label="cluster0")
-plt.scatter(df1["Annual Income (k$)"],df1["Spending Score (1-
-100)"],c="black",label="cluster1")
-plt.scatter(df2["Annual Income (k$)"],df2["Spending Score (1-
-100)"],c="blue",label="cluster2")
-plt.scatter(df3["Annual Income (k$)"],df3["Spending Score (1-
-100)"],c="green",label="cluster3")
-plt.scatter(df4["Annual Income (k$)"],df4["Spending Score (1-
-100)"],c="magenta",label="cluster4")
+plt.scatter(df0["Annual Income (k$)"],df0["Spending Score (1-100)"],c="red",label="cluster0")
+plt.scatter(df1["Annual Income (k$)"],df1["Spending Score (1-100)"],c="black",label="cluster1")
+plt.scatter(df2["Annual Income (k$)"],df2["Spending Score (1-100)"],c="blue",label="cluster2")
+plt.scatter(df3["Annual Income (k$)"],df3["Spending Score (1-100)"],c="green",label="cluster3")
+plt.scatter(df4["Annual Income (k$)"],df4["Spending Score (1-100)"],c="magenta",label="cluster4")
 plt.legend()
-plt.title("Customer Segments")
+plt.title("Customer Segments")
 
 ```
 
 ## Output:
-## data.head()
-![image](https://github.com/DEEPAK2200233/Implementation-of-K-Means-Clustering-for-Customer-Segmentation/assets/118707676/684e658b-6f02-49cf-86a1-514c7a262972)
+### Dataset:
+![image](https://github.com/Ashwinkumar-03/Implementation-of-K-Means-Clustering-for-Customer-Segmentation/assets/118663725/5071bb28-08a0-45e5-8fab-de26f6cedd80)
 
-## data.info()
-![image](https://github.com/DEEPAK2200233/Implementation-of-K-Means-Clustering-for-Customer-Segmentation/assets/118707676/1f8d0a9a-65da-4bbf-94d1-22c22fd90b90)
+### Dataset information:
+![image](https://github.com/Ashwinkumar-03/Implementation-of-K-Means-Clustering-for-Customer-Segmentation/assets/118663725/60f54570-1e72-4898-a00e-b944a5e8d75a)
 
-## data.isnull()
-![image](https://github.com/DEEPAK2200233/Implementation-of-K-Means-Clustering-for-Customer-Segmentation/assets/118707676/e7e811f3-2504-4199-acc4-9442939b0012)
+![image](https://github.com/Ashwinkumar-03/Implementation-of-K-Means-Clustering-for-Customer-Segmentation/assets/118663725/1477e07a-de78-4b44-9616-273b856800e3)
 
-## Elbow method Graph
-![image](https://github.com/DEEPAK2200233/Implementation-of-K-Means-Clustering-for-Customer-Segmentation/assets/118707676/a5d0c480-2810-45b7-b815-bdf16dca1e7a)
+### Elbow method graph (wcss vs each iteration):
+![image](https://github.com/Ashwinkumar-03/Implementation-of-K-Means-Clustering-for-Customer-Segmentation/assets/118663725/342a2a16-f788-4898-9b5c-78964fa253ee)
 
-## Kmeans cluster
-![image](https://github.com/DEEPAK2200233/Implementation-of-K-Means-Clustering-for-Customer-Segmentation/assets/118707676/4a5872bd-758e-4eb0-a820-802aef41e188)
-
-## Cluster segments Graphs
-![image](https://github.com/DEEPAK2200233/Implementation-of-K-Means-Clustering-for-Customer-Segmentation/assets/118707676/037b5149-4fc9-4c65-8dfb-ffd66a7f4246)
-
-
+### Cluster represnting customer segments-graph:
+![image](https://github.com/Ashwinkumar-03/Implementation-of-K-Means-Clustering-for-Customer-Segmentation/assets/118663725/c2a6059b-e83c-47db-941b-bb3e4e32d563)
 
 ## Result:
 Thus the program to implement the K Means Clustering for Customer Segmentation is written and verified using python programming.
